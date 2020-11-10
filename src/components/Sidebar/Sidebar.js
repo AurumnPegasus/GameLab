@@ -1,12 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandPeace, faCircle, faQuestion, faHatCowboySide, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faHandPeace, faCircle, faQuestion, faHatCowboySide, faSearchLocation } from '@fortawesome/free-solid-svg-icons'
 import { faGuilded } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 
 import './Sidebar.css'
 import { NavLink } from 'react-router-dom'
-
 
 
 const Sidebar = () => {
@@ -58,7 +57,7 @@ const Sidebar = () => {
                 </li>
                 <li className='r-nav-item'>
                     <NavLink to='/scotlandyard' className='r-nav-link'>
-                        <FontAwesomeIcon className='r-link-icon' icon={faSearch} />
+                        <FontAwesomeIcon className='r-link-icon' icon={faSearchLocation} />
                         <span className='r-link-text'>Scotland Yard</span>
                     </NavLink>
                 </li>
