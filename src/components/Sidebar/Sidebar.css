@@ -1,0 +1,136 @@
+/* .Sidebar > .r-side-nav > .r-nav-logo & .r-nav-item > .r-nav-link > .r-link-text & .r-link-icon */
+
+.Sidebar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    z-index: 10;
+}
+
+.Sidebar:hover .r-nav-logo svg {
+    transform: rotate(-180deg);
+}
+
+.r-side-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.r-nav-logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.1ch;
+    width: 100%;
+}
+
+#brand {
+    font-family: 'AudioWide';
+    font-size: 1.5rem;
+    color: #CCFF00;
+}
+
+.r-nav-logo svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+
+.r-nav-logo {
+    color: #CCFF00 !important;
+}
+
+.r-nav-item {
+    width: 100%;
+}
+
+.r-nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.r-nav-link:hover {
+    filter: grayscale(0) opacity(1);
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.r-nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.r-link-text {
+    opacity: 0;
+    font-family: 'Oswald';
+    font-size: 1.1rem;
+    -webkit-transition: opacity 10ms;
+    transition: opacity 10ms;
+}
+
+.r-link-icon {
+    font-size: 2rem;
+    color: #CCFF00;
+    margin: 1rem 1.5rem;
+    transition: var(--transition-speed);
+}
+
+.active {
+    filter: grayscale(0) opacity(1);
+    background-color: var(--bg-secondary);
+}
+
+@media only screen and (max-width: 992px) {
+    .Sidebar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .r-nav-logo {
+        display: none;
+    }
+
+    .r-side-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .r-link-text {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .Sidebar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .Sidebar:hover {
+        width: 15rem;
+    }
+
+    .Sidebar:hover .r-link-text {
+        opacity: 1;
+        -webkit-transition: opacity 1000ms ease-in;
+        transition: opacity 1000ms ease-in;
+    }
+}
