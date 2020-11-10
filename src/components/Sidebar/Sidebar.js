@@ -14,8 +14,8 @@ const Sidebar = () => {
         <motion.nav
             className='Sidebar'
             initial={{
-                x: window.screen.availWidth > 991 ? -100 : 0,
-                y: window.screen.availWidth > 991 ? 0 : 100
+                x: window.innerWidth > 991 ? -100 : 0,
+                y: window.innerWidth > 991 ? 0 : 100
             }}
             animate={{
                 x: 0,
