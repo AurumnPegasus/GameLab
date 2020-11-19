@@ -194,13 +194,13 @@ play out the scenario:
 
 We make the guess 0123 and get the response \`3 BULLS 0 COWS\`. This means that the secret number is in one of the following forms:
 
-- x123
-- 0x23
-- 01x3
-- 012x
+- \`x123\`
+- \`0x23\`
+- \`01x3\`
+- \`012x\`
 
-Where x is a digit from 0→9, except for the digit that was there in the guess. Say our next guess is 0000 and we get \`0 BULLS 0 COWS\`. This means that there 
-is no 0 in the secret number at all, and so the secret number must be of the form x123, which leaves only 9 possible outcomes. On the other hand, if we get 
+Where \`x\` is a digit from $0\\rightarrow9$, except for the digit that was there in the guess. Say our next guess is 0000 and we get \`0 BULLS 0 COWS\`. This means that there 
+is no 0 in the secret number at all, and so the secret number must be of the form \`x123\`, which leaves only 9 possible outcomes. On the other hand, if we get 
 the response \`1 BULL 0 COWS\`, means that the secret number does have a 0 in its first digit's place and so its is of one of the other 3 forms.
 
 So here taking numbers outside the standard space giave us an advantage and this shows why they can be handy in certain situations to minimize the steps required
