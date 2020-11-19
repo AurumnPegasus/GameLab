@@ -27,7 +27,7 @@ const Chopsticks = () => {
                 <h2 style={sectionTitleStyle}>📜 INTRODUCTION AND RULES</h2>
                 <hr className='mb-4' />
                 <ReactMarkdown source={Content.introAndRules} />
-                <img src={require('./Images/11.png')} alt="" />
+                <img className='img-fluid' src={process.env.PUBLIC_URL + '/assets/ContentImages/Chopsticks/11.png'} alt="" />
 
                 {seperator}
 

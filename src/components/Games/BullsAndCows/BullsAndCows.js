@@ -51,7 +51,7 @@ const BullsAndCows = () => {
 
                 {seperator}
 
-                <h2 style={sectionTitleStyle}>🏁 HOW DID WE REACH HERE?</h2>
+                <h2 style={sectionTitleStyle}>🏁 HOW DID WE GET HERE?</h2>
                 <hr className='mb-4' />
                 <ReactMarkdown source={Content.process} plugins={[math]} renderers={renderers} />
 
