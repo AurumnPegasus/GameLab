@@ -22,7 +22,7 @@ const seperator = <div className="my-4 py-2" />;
 const Chopsticks = () => {
     return (
         <>
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
             <div className="d-flex-column align-items-end mt-3 p-0" style={{ fontFamily: 'Oswald', marginLeft: window.innerWidth > 991 ? '5rem' : '0.5rem' }}>
                 <h1 className="text-center" style={{ fontSize: '3rem', fontFamily: 'AudioWide' }}>CHOPSTICKS</h1>
                 <hr className='mb-5' />
