@@ -538,12 +538,7 @@ To avoid this , what we can model is this : -
 If the first detective succeeds , a score 1 is returned. If the second succeeds , score $1 - r$ is returned , if 3rd $1- 2r$ and so on. 
 Here $r$ is just a number between 0 and 1. If r is too small , the above problem prevails. Also if r is too large , the detectives 
 might get selfish and only try to maximize their score!
-    `,
-    reference:
-        `
-
     `
-
 }
 
 export default Content; 

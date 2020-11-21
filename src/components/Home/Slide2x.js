@@ -18,15 +18,15 @@ const Slide2x = () => {
                         </p>
                 <div className="row mt-4 justify-content-center">
                     <div className="d-flex-column col-6">
-                        <PersonCard name='Arihanth T.' image='placeholder.jpg' />
+                        <PersonCard name='Arihanth T.' image='arihanth.jpeg' />
                         <PersonCard name='Mehul Mathur' image='mehul.jpeg' />
-                        <PersonCard name='Ritvik Kalra' image='placeholder.jpg' />
-                        <PersonCard name='Sidharth Giri' image='placeholder.jpg' />
+                        <PersonCard name='Ritvik Kalra' image='ritvik.jpg' />
+                        <PersonCard name='Sidharth Giri' image='sidharth.jpg' />
 
                     </div>
                     <div className="d-flex-column col-6">
                         <PersonCard name='Dhruv Kapur' image='dhruv.png' />
-                        <PersonCard name='Pooja Desur' image='placeholder.jpg' />
+                        <PersonCard name='Pooja Desur' image='pooja.jpg' />
                         <PersonCard name='Shivansh S.' image='shivansh.jpg' />
                     </div>
                 </div>

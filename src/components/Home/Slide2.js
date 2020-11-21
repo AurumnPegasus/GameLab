@@ -39,16 +39,16 @@ const Slide2 = () => {
                         </p>
                         <div className="row mt-4 mx-2 justify-content-center">
                             <div className="d-flex-column col-5 col-xl-4">
-                                <PersonCard name='Arihanth T.' image='placeholder.jpg'/>
-                                <PersonCard name='Mehul Mathur' image='mehul.jpeg'/>
-                                <PersonCard name='Ritvik Kalra' image='placeholder.jpg'/>
-                                <PersonCard name='Sidharth Giri' image='placeholder.jpg' />
+                                <PersonCard name='Arihanth T.' image='arihanth.jpeg' />
+                                <PersonCard name='Mehul Mathur' image='mehul.jpeg' />
+                                <PersonCard name='Ritvik Kalra' image='ritvik.jpg' />
+                                <PersonCard name='Sidharth Giri' image='sidharth.jpg' />
 
                             </div>
                             <div className="col-1"></div>
                             <div className="d-flex-column col-5 col-xl-4">
-                                <PersonCard name='Dhruv Kapur' image='dhruv.png'/>
-                                <PersonCard name='Pooja Desur' image='placeholder.jpg'/>
+                                <PersonCard name='Dhruv Kapur' image='dhruv.png' />
+                                <PersonCard name='Pooja Desur' image='pooja.jpg' />
                                 <PersonCard name='Shivansh S.' image='shivansh.jpg' />
                             </div>
                         </div>

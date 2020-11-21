@@ -60,7 +60,7 @@ const ScotlandYard = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>👨🏾‍🔬 FORMALISATION</h2>
+                    <h2 style={sectionTitleStyle}>🤵 FORMALISATION</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.formal1} plugins={[math]} renderers={renderers} />
 
@@ -113,13 +113,13 @@ const ScotlandYard = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>📈 PSPACE</h2>
+                    <h2 style={sectionTitleStyle}>🌌 PSPACE</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.pspace} plugins={[math]} renderers={renderers} />
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>❓ HEURISTICS</h2>
+                    <h2 style={sectionTitleStyle}>🏃 HEURISTICS</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.heuristics} plugins={[math]} renderers={renderers} />
 
@@ -192,9 +192,8 @@ const ScotlandYard = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🗒️ REFERENCES</h2>
+                    <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
                     <hr className='mb-4' />
-                    <ReactMarkdown source={Content.reference} plugins={[math]} renderers={renderers} />
                 </div>
             </div>
         </>

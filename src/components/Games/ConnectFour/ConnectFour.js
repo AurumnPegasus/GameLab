@@ -143,19 +143,23 @@ const ConnectFour = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>❖ BLACK AND WHITE</h2>
+                    <h2 style={sectionTitleStyle}>⚫⚪ BLACK AND WHITE</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.bw} plugins={[math]} renderers={renderers} />
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>💡 FOOD FOR THOUGHT</h2>
+                    <h2 style={sectionTitleStyle}>🧠 FOOD FOR THOUGHT</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.fft} plugins={[math]} renderers={renderers} />
-
                     <div className="col">
                         <img className='img-fluid mx-auto d-block' src={process.env.PUBLIC_URL + '/assets/ContentImages/Connect4/15.png'} alt="" />
                     </div>
+
+                    {seperator}
+
+                    <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
+                    <hr className='mb-4' />
                 </div>
             </div>
         </>

@@ -60,6 +60,11 @@ const BullsAndCows = () => {
 
                     {seperator}
 
+                    <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
+                    <hr className='mb-4' />
+
+                    {seperator}
+
                     <hr className='mb-1' />
                     <h1 className="display-1 text-center">🐂🐄</h1>
                 </div>
