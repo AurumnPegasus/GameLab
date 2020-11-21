@@ -303,9 +303,13 @@ and further in this discussion:
 of the candidates for the player who asked the question becomes $b$ and if the answer is "No", then then the size of the pool becomes
 $n-b$ for the first player or $m-b$ for the second player.
 
+The obvious strategy, that first came to my mind was of that to choose $$b = \\lfloor \\frac{n}{2} \\rfloor $$.  This is not the optimal strategy in “Guess Who?” because Player 1 does
+not want to minimize this expected value: instead he wants to maximize the probability of getting there before Player 2 does. This race against the opponent is what drives the optimal bidding behavior when
+Player 1 is significantly behind his opponent.
+
 Lets gets get into the crux: **The strategy**.
 
-When it is Player 1's tunr, if Player 1 has $n$ candidates in their pool and Player 2 has $m$ candidates in their pool, then Player 1 has the
+When it is Player 1's turn, if Player 1 has $n$ candidates in their pool and Player 2 has $m$ candidates in their pool, then Player 1 has the
 following optimal strategy:
 
 * If $n \\geq 2^{k+1} + 1$ while $2^k+1 \\leq m \\leq 2^{k+1}$ for some $k \\in \\mathbb{N} \\cup 0$, then Player 1 is in the weeds and must gamble 
