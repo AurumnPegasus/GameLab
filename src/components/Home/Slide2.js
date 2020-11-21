@@ -49,7 +49,7 @@ const Slide2 = () => {
                             <div className="d-flex-column col-5 col-xl-4">
                                 <PersonCard name='Dhruv Kapur' image='dhruv.png'/>
                                 <PersonCard name='Pooja Desur' image='placeholder.jpg'/>
-                                <PersonCard name='Shivansh S.' image='placeholder.jpg' />
+                                <PersonCard name='Shivansh S.' image='shivansh.jpg' />
                             </div>
                         </div>
                     </div>

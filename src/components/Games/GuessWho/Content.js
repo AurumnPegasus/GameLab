@@ -285,6 +285,187 @@ while k > 0:
     else if Win_Flag == 1:
         You win. Terminate Algorithm.
 \`\`\`
+
+It is important to realize here that the game logic itself is quite trivial. The really important part is to identify features
+that will lead to optimal size feature sets. Also, this is not an "Always Win" algorithm as there is always a chance for the
+opponent to get really lucky with their guesses. Rather, this is an approach with a definitive mean.
+    `,
+    spicyMath1:
+        `
+### **Strategy**
+
+Before laying out the optimal strategy, it would be beneficial for us to define some variable and terms which will be used in the strategy
+and further in this discussion:
+
+* **$n$** is the number of candidates in the Player 1's pool.
+* **$m$** is the number of candidates in the Player 2's pool.
+* A **$\\text{Bid}$** of side $b$ refers to a player asking a question such that if the answer to the question is "Yes" then the size of the pool
+of the candidates for the player who asked the question becomes $b$ and if the answer is "No", then then the size of the pool becomes
+$n-b$ for the first player or $m-b$ for the second player.
+
+Lets gets get into the crux: **The strategy**.
+
+When it is Player 1's tunr, if Player 1 has $n$ candidates in their pool and Player 2 has $m$ candidates in their pool, then Player 1 has the
+following optimal strategy:
+
+* If $n \\geq 2^{k+1} + 1$ while $2^k+1 \\leq m \\leq 2^{k+1}$ for some $k \\in \\mathbb{N} \\cup 0$, then Player 1 is in the weeds and must gamble 
+on a risky move to catch up. Their optimal play is a bid of
+
+$$
+b^*(n, m) = 2^k = 2^{\\log_2(m-1)}
+$$
+
+and the probability Player 1 wins if both players play optimally is:
+
+$$
+p^*(n, m) = \\frac{2^{k+1}}{n} - \\frac{2}{3} \\times \\frac{2^{2k+1}+1}{nm} 
+$$
+
+* If $2^k+1 \\leq n \\leq 2^{k+1}$ while $m \\geq 2^{k+1}$ for some $k \\in \\mathbb{N} \\cup 0$ then Player 1 has the upper hand and can stay in the
+lead by making low risk, sure-shot plays. Their optimal bid is
+
+$$
+b^*(n, m) = \\lfloor\\frac{1}{2}n\\rfloor
+$$
+
+and the probability that Player 1 can win if both the players play optimally is:
+
+$$
+p^*(n, m) = 1 - \\frac{2^k}{m} + \\frac{2}{3} \\times \\frac{2^{2k} + 2}{nm}
+$$
+
+The winning probability for player 1 based on the size of the pool of candidates of player 1 vs player 2 from any situation is plotted as follows:
+    `,
+    spicyMath2:
+        `
+### **The Mathematical Model**
+
+The first step to finding the optimal strategy is to fist convert the game into a mathematical model. To do this, we
+make one simple assumption:
+
+*The secret identity of the opponent is uniformly distributed amongst all possible candidates. Because of the eliminating nature of 
+the “Yes”/“No” questions, this property persists throughout the game. With this assumption, only the number of remaining characters 
+in the pool is relevant to the analysis, not the details of which characters in particular are remaining.*
+
+With this assumption we can mode the game as a **Simple Stochastic Game**.
+
+*In game theory, a stochastic game, introduced by Lloyd Shapley in the early 1950s, is a dynamic game with probabilistic transitions 
+played by one or more players. The game is played in a sequence of stages. At the beginning of each stage the game is in some state. 
+The players select actions and each player receives a payoff that depends on the current state and the chosen actions. The game then 
+moves to a new random state whose distribution depends on the previous state and the actions chosen by the players. The procedure is
+repeated at the new state and play continues for a finite or infinite number of stages. The total payoff to a player is often taken
+to be the discounted sum of the stage payoffs or the limit inferior of the averages of the stage payoffs.*
+
+We'll model the agme into the followinf statespace:
+$$
+S=\\{\\langle n,m,P_i\\rangle: n,m \\in \\mathbb{N} , i \\in \\{1,2\\}\\}
+$$
+
+The first entry $n$  indicates the size of the pool of candidates player 1 is left with and the second entry $m$ indicates the size of
+the pool of candidates player 2 is left with. The last token tells which player has to take its turn.
+
+Suppose the value of last token is $P_1$. This means that player 1 takes his turn. He will ask a "Yes"/"No" question from player 2 
+regarding his character's secret identity, and based on the answer lets consider $b_1$ the size of pool left if the answer is "Yes". 
+This is called Player 1 making a bid of $b_1$ Thus the next state would be something like this:
+$$
+
+\\text{Starting at }\\langle n,m,P_1 \\rangle \\text{ with Player 1 bidding }b_1\\longrightarrow 
+\\begin{cases}
+\\langle b_1,m,P_2 \\rangle & \\text{with probability } \\frac{b_1}{n} \\\\
+\\langle n-b_1,m,P_2 \\rangle & \\text{with probability } \\frac{n-b_1}{n}
+\\end{cases}
+$$
+
+This type of play continues till one of the players is left with size of pool = 1. That is to say the following states are terminal states 
+
+$$
+\\forall m>1,\\langle 1,m,P_2 \\rangle \\leftrightarrow \\text{Player 1 immediately wins} 
+$$
+
+$$
+\\forall n>1, \\langle n,1,P_1 \\rangle \\leftrightarrow \\text{Player 2 immediately wins}
+$$
+
+The state $\\langle 1,1,P_i \\rangle$ is not possible because before the other player reaches 1 the player which had already reached that 
+state would declare the win.
+
+This definition of the game puts it under the framework of *Simple Stochastic game.* 
+
+The *Simple Stochastic Game* show the existence of an optimal bidding strategy. The bidding for this strategy can be denoted as:
+
+$$
+b^* : \\mathbb{N} \\times \\mathbb{N} \\rightarrow \\mathbb{N}
+$$
+
+and the optimal probability function can be denoted by 
+
+$$
+p^* : \\mathbb{N} \\times \\mathbb{N} \\rightarrow [0,1]
+$$
+
+that is optimal for Player 1 in the sense that:
+
+* If Player 1 makes the bid $b^* : \\mathbb{N} \\times \\mathbb{N} \\rightarrow \\mathbb{N}$ when the state is $\\langle n,m,P_1\\rangle$ 
+then no matter the strategy Player 1's probability of winning is $ \\geq p^*: \\mathbb{N} \\times \\mathbb{N} \\rightarrow [0,1]$.
+* If Player 1 makes some other bid then the probability is $\\leq p^*$.
+
+The game guess who is symmetric between Player 1 and Player 2 in the sense that the position $\\langle n,m,P_1\\rangle$ is functionally 
+identical too $\\langle m,n,P_2\\rangle$. This means that if the probability for player 1 to win is $p^*(n,m)$ then probability for 
+player 2 is $p^*(m,n)$. Because of this symmetry, the optimal probability function satisfies a nice recurrence relation:
+
+$
+\\textbf{Proposition: } p^*(n,m) \\text{ and } b^*(n,m) \\text{ satisfy the following recurrence}
+$
+
+$$
+p^*(m,n)=\\max_{b \\in[1,n-1] } \\{ 1-\\frac{b}{n}p^*(m,b)-\\frac{n-b}{n}p^*(m,n-b) \\}
+$$
+
+$$
+b^*(m,n)=\\arg \\max_{b \\in[1,n-1] } \\{ 1-\\frac{b}{n}p^*(m,b)-\\frac{n-b}{n}p^*(m,n-b) \\}
+$$
+
+$
+\\textit{Proof}
+$
+
+Let $p_b(n,m)$ be the probability that player 1 wins from the position $\\langle n,m,P_1 \\rangle if he bids \\text{b} at \\langle n,m,P_1 \\rangle$ 
+and both players play optimally thereafter. By the rules of the game then
+
+$$
+p_b(n,m) = \\frac{b}{n}(1-p^*(m,n)) + \\frac{n-b}{n}(1-p^*(m,n-b))
+$$
+
+since with probability $\\frac{b}{n}$ we move to the position $\\langle b,m,P_2 \\rangle$ where Player 1's probability to win is $1-p*(m,n)$ and 
+with the probability $\\frac{n-b}{n}$ we move to the position $\\langle n-b,m,P_2 \\rangle$where Player 1's probability of win is $1-p^*(m,n-b)$.
+
+The following is the psuedo code for finding the $p^* \\text{ and } b^*$
+
+**Algorithm 1** Numerically computing $p^*(n,m)$ and $b^*(n,m)$
+    `,
+    spicyMath3:
+        `
+Now we are going to divide our statespace into two different sets which are namely **In the weeds** and **the upper hand**.
+
+#### **In the Weeds**
+
+$$
+W_{k,P_1} := \\{\\langle n,m,P_1\\rangle : 2^{k+1} < n \\text{ and } 2^k < m \\leq 2^{k+1}\\} 
+$$
+
+When $\\langle n,m,P_1 \\rangle \\in W_{k,P_1}$ we say that Player 1 is in the weeds at level $k$.
+
+#### **The Upper Hand**
+
+$$
+U_{k,P_1} := \\{\\langle n,m,P_1 \\rangle: 2^k < n \\leq 2^{k+1} \\text{ and } 2^k < m \\} 
+$$
+
+When $\\langle n,m,P_1 \\rangle \\in U_{k,P_2}$ we say that Player 1 has the Upper hand at level $k$.
+
+## Proof time
+
+Function $q(n,m)$ is used to find the probability for player 1 winning at a certain state and can be split in the following way.
     `
 };
 

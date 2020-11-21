@@ -67,9 +67,35 @@ const GuessWho = () => {
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.application1} plugins={[math]} renderers={renderers} />
                     <div className="row justify-content-center mb-5">
-                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/2.png'} alt="Distribution" className="img-fluid col-6 col-md-3" />
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/2.png'} alt="Sam" className="img-fluid col-6 col-md-3" />
                     </div>
                     <ReactMarkdown source={Content.application2} plugins={[math]} renderers={renderers} />
+
+                    {seperator}
+
+                    <h2 style={sectionTitleStyle}>🌶️ SOME SPICY MATH</h2>
+                    <hr className='mb-4' />
+                    <ReactMarkdown source={Content.spicyMath1} plugins={[math]} renderers={renderers} />
+                    <div className="row justify-content-center mb-5">
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/3.png'} alt="Probability" className="img-fluid col-12 col-md-10" />
+                    </div>
+                    <ReactMarkdown source={Content.spicyMath2} plugins={[math]} renderers={renderers} />
+                    <div className="row justify-content-center mb-5">
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/4.png'} alt="Algorithm" className="img-fluid col-12" />
+                    </div>
+                    <ReactMarkdown source={Content.spicyMath3} plugins={[math]} renderers={renderers} />
+                    <div className="row justify-content-center mb-5">
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/5.png'} alt="Algorithm" className="img-fluid col-11 col-md-6" />
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/6.png'} alt="Algorithm" className="img-fluid col-12" />
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/7.png'} alt="Algorithm" className="img-fluid col-12" />
+                        <img src={process.env.PUBLIC_URL + '/assets/ContentImages/GuessWho/8.png'} alt="Algorithm" className="img-fluid col-12" />
+                    </div>
+
+                    {seperator}
+
+                    <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
+                    <hr className='mb-4' />
+                    <a href="https://arxiv.org/pdf/1509.03327.pdf">Optimal Strategy in “Guess Who?”: Beyond Binary Search - Mihai Nica.</a>
                 </div>
             </div>
         </>
