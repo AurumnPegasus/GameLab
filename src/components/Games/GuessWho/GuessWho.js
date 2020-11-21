@@ -38,11 +38,7 @@ const GuessWho = () => {
                     <h2 style={sectionTitleStyle}>👀 A QUICK ANALYSIS</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.quickAnalysis1} />
-                    <div className="row justify-content-center mb-5">
-                        <div className="embed-responsive embed-responsive-16by9 col-12 col-md-8">
-                            <iframe title='StrategyVideo' className="embed-responsive-item" src="https://www.youtube.com/embed/FRlbNOno5VA" allowFullScreen></iframe>
-                        </div>
-                    </div>
+
                     <ReactMarkdown source={Content.quickAnalysis2} />
 
                     {seperator}

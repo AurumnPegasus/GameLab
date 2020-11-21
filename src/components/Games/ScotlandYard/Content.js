@@ -137,7 +137,7 @@ $$
 $$
 
 The only difference in this is that  $\\mathcal{I}_i$ carries information sets for each $i \\in N$. $\\space \\mathcal{I}_i = \\{I_1, I_2, . . . Iq\\}$ 
-where each $I$ represents a set of histories, there having been $q$ rounds of the game played so far. **** Each $I$ basically is a set 
+where each $I$ represents a set of histories, there having been $q$ rounds of the game played so far. Each $I$ basically is a set 
 of histories (or state changes of the board) of that round (till $i$ makes an action again).  Intuitively, an extensive game 
 with imperfect information models the situation in which player $i$ knows that some history $h \\in I \\in \\mathcal{I}_i$  has happened, but there 
 are unable to tell $h$  apart from the other histories in $I$. In simple terms, they know other players have made a move based on the last action 
@@ -145,7 +145,7 @@ they took, but are not completely sure of the previous actions the player took.
 
 A function $S$  is called a strategy for a player $i$  in $\\text{G}$ if it maps every information partition $I \\in \\mathcal{I}_i$ belonging to $i$ onto action in $A(I)$
 
-### **Assumptions**
+### **Assumptions for Mathematical Modelling**
 For convenience, there are some assumptions which have been taken.
 
 1. **There is only 1 mode of transport**, that is Taxi. The same method described as follows can be easily translated with more modes of transport.
@@ -538,6 +538,10 @@ To avoid this , what we can model is this : -
 If the first detective succeeds , a score 1 is returned. If the second succeeds , score $1 - r$ is returned , if 3rd $1- 2r$ and so on. 
 Here $r$ is just a number between 0 and 1. If r is too small , the above problem prevails. Also if r is too large , the detectives 
 might get selfish and only try to maximize their score!
+    `,
+    reference:
+        `
+
     `
 
 }

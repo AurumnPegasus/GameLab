@@ -177,6 +177,12 @@ const Chopsticks = () => {
                             </tr>
                         </tbody>
                     </table>
+
+                    {seperator}
+
+                    <h2 style={sectionTitleStyle}>🗒️ REFERENCES</h2>
+                    <hr className='mb-4' />
+                    <ReactMarkdown source={Content.reference} plugins={[math]} renderers={renderers} />
                 </div>
             </div>
         </>

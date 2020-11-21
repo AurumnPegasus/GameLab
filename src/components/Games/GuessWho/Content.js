@@ -19,7 +19,7 @@ We will try to explain the ideas to the best of our abilities, as we have unders
 
     quickAnalysis2:
         `
-A quick summary of the video:
+My initial thoughts on Guess Who:
 
 * There can be two ways you can go about asking questions:
     1. Ask a specific question → If the answer is **NO** then it would result in very few cards being flipped down.

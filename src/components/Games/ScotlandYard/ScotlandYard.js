@@ -54,7 +54,7 @@ const ScotlandYard = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🏗️ LAYING FOUNDATION</h2>
+                    <h2 style={sectionTitleStyle}>🏗️ LAYING THE FOUNDATION</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.foundation} plugins={[math]} renderers={renderers} />
 
@@ -125,7 +125,7 @@ const ScotlandYard = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🛠️ Solving Scotland Yard</h2>
+                    <h2 style={sectionTitleStyle}>🛠️ SOLVING SCOTLAND YARD</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.solve1} plugins={[math]} renderers={renderers} />
 
@@ -189,6 +189,12 @@ const ScotlandYard = () => {
                     </div>
 
                     <ReactMarkdown source={Content.solve8} plugins={[math]} renderers={renderers} />
+
+                    {seperator}
+
+                    <h2 style={sectionTitleStyle}>🗒️ REFERENCES</h2>
+                    <hr className='mb-4' />
+                    <ReactMarkdown source={Content.reference} plugins={[math]} renderers={renderers} />
                 </div>
             </div>
         </>
