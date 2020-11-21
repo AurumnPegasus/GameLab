@@ -27,7 +27,7 @@ const Chopsticks = () => {
                 <h1 className="text-center" style={{ fontSize: '3rem', fontFamily: 'AudioWide' }}>CHOPSTICKS</h1>
                 <hr className='mb-5' />
                 <div className='container mb-5' style={{ fontSize: '1.3rem' }}>
-                    <h2 style={sectionTitleStyle}>📜 INTRODUCTION AND RULES</h2>
+                    <h2 style={sectionTitleStyle}>📜 INTRODUCTION</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.intro} />
 
@@ -90,9 +90,10 @@ const Chopsticks = () => {
                             <img className='img-fluid mx-auto d-block' src={process.env.PUBLIC_URL + '/assets/ContentImages/Chopsticks/6.jpeg'} alt="" />
                         </div>
                     </div>
+
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🥢 Variants</h2>
+                    <h2 style={sectionTitleStyle}>🥢 VARIANTS</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.variant1} />
 
@@ -127,7 +128,7 @@ const Chopsticks = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🖋️ Abstraction</h2>
+                    <h2 style={sectionTitleStyle}>🖋️ ABSTRACTION</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.abst1} plugins={[math]} renderers={renderers} />
 
@@ -147,7 +148,7 @@ const Chopsticks = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🧮 Algorithm</h2>
+                    <h2 style={sectionTitleStyle}>🧮 ALGORITHM</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.algo1} plugins={[math]} renderers={renderers} />
                     <table class="table table-sm table-bordered" style={{ "text-align": "center" }}>
@@ -176,6 +177,12 @@ const Chopsticks = () => {
                             </tr>
                         </tbody>
                     </table>
+
+                    {seperator}
+
+                    <h2 style={sectionTitleStyle}>🗒️ REFERENCES</h2>
+                    <hr className='mb-4' />
+                    <ReactMarkdown source={Content.reference} plugins={[math]} renderers={renderers} />
                 </div>
             </div>
         </>
