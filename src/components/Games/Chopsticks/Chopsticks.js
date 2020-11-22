@@ -93,7 +93,7 @@ const Chopsticks = () => {
 
                     {seperator}
 
-                    <h2 style={sectionTitleStyle}>🥢 VARIANTS</h2>
+                    <h2 style={sectionTitleStyle}>🃏 VARIANTS</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.variant1} />
 
@@ -182,6 +182,10 @@ const Chopsticks = () => {
 
                     <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
                     <hr className='mb-4' />
+                    <ReactMarkdown source={Content.resource} />
+
+                    <hr className='mb-1' />
+                    <h1 className="display-1 text-center">🥢</h1>
                 </div>
             </div>
         </>

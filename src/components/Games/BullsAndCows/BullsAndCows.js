@@ -62,6 +62,7 @@ const BullsAndCows = () => {
 
                     <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
                     <hr className='mb-4' />
+                    <ReactMarkdown source={Content.resource} />
 
                     {seperator}
 

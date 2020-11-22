@@ -91,7 +91,10 @@ const GuessWho = () => {
 
                     <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
                     <hr className='mb-4' />
-                    <a href="https://arxiv.org/pdf/1509.03327.pdf">Optimal Strategy in “Guess Who?”: Beyond Binary Search - Mihai Nica.</a>
+                    <ReactMarkdown source={Content.resource} />
+
+                    <hr className='mb-1' />
+                    <h1 className="display-1 text-center">❓</h1>
                 </div>
             </div>
         </>

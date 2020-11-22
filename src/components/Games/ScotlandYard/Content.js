@@ -538,6 +538,15 @@ To avoid this , what we can model is this : -
 If the first detective succeeds , a score 1 is returned. If the second succeeds , score $1 - r$ is returned , if 3rd $1- 2r$ and so on. 
 Here $r$ is just a number between 0 and 1. If r is too small , the above problem prevails. Also if r is too large , the detectives 
 might get selfish and only try to maximize their score!
+    `,
+    resource:
+        `
+- **P. Nijssen and M. H. M. Winands, "Monte Carlo Tree Search for the Hide-and-Seek Game Scotland Yard," in IEEE Transactions** on Computational 
+Intelligence and AI in Games, vol. 4, no. 4, pp. 282-294, Dec. 2012, doi: 10.1109/TCIAIG.2012.2210424.
+
+- **Sevenster, Merlijn. (2006). The complexity of Scotland Yard. Journal of Pharmacology and Experimental Therapeutics** - J PHARMACOL EXP THER.
+
+- Blogs on Monte Carlo Simulation
     `
 }
 

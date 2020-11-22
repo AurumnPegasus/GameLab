@@ -206,7 +206,12 @@ the response \`1 BULL 0 COWS\`, means that the secret number does have a 0 in it
 So here taking numbers outside the standard space giave us an advantage and this shows why they can be handy in certain situations to minimize the steps required
 to guess the secret code. At the same time increasing the space from a maximum of $5040$ (4-digit numbers, distinct digits) to $1000$ (all 4-digit numbers) is *more 
 computationally expensive*.
-
+    `,
+    resource:
+        `
+- Paper by Alexy Slovesnov
+- Paper by John Francis
+- Bulls and Cows Wikipedia page
     `
 };
 
