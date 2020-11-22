@@ -17,6 +17,6 @@ npm i
 npm start
 ```
 
-Or to check the website out:
+Or to check the website out:  
 Hosted on github.io [https://captains-mistress.github.io/]  
 or on heroku [https://gamelabx.herokuapp.com/]
