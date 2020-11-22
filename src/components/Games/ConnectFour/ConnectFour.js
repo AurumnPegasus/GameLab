@@ -160,6 +160,13 @@ const ConnectFour = () => {
 
                     <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
                     <hr className='mb-4' />
+                    <ReactMarkdown source={Content.resource} />
+
+                    <hr className='mb-1' />
+                    <p className="text-center" style={{ fontSize: "0.8rem" }}>⁣⚪⚪⚪⚪⚪⚪⚪</p>
+                    <p className="text-center" style={{ fontSize: "0.8rem" }}>⚪⚪⚪⚪⚪⚪⚪</p>
+                    <p className="text-center" style={{ fontSize: "0.8rem" }}>⚪⚪⚪⚪⚪⚪⚪</p>
+                    <p className="text-center" style={{ fontSize: "0.8rem" }}>⚪⚪🔵🔴⚪⚪⚪</p>
                 </div>
             </div>
         </>

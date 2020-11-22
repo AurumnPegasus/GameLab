@@ -470,6 +470,15 @@ When $\\langle n,m,P_1 \\rangle \\in U_{k,P_2}$ we say that Player 1 has the Upp
 ## Proof time
 
 Function $q(n,m)$ is used to find the probability for player 1 winning at a certain state and can be split in the following way.
+    `,
+    resource:
+        `
+- **Optimal Strategy in “Guess Who?”: Beyond Binary Search - Mihai Nica**
+- Lectures on Complexity by Jhonathan Katz
+- Article on pipmodern about Complexity State of game space Tree
+- Video by Mark Rober on Guess Who
+- Article by Chalkdust Magazine on cracking board Games
+- **Condon, A. (1992). The complexity of stochastic games**. Information and Computation 96, 203–224
     `
 };
 

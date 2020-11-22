@@ -281,8 +281,13 @@ the Oracle, is always at an advantage.
 
 Another thought to explore is *number of legal ways to arrange* $N$ coins in board. For now, we take the board to be the standard $7 \\times 6$ board.
     `,
-    reference:
+    resource:
         `
+- Resources by Victor Allis
+- Alpha Beta Pruning based heuristics
+- Principles and Tehniques BY Stanford
+- C4 Numbers by oeis org
+- Math oriented resources behind Connect-4
     `
 }
 

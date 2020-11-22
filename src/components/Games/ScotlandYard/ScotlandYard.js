@@ -27,7 +27,7 @@ const ScotlandYard = () => {
                 <h1 className="text-center" style={{ fontSize: '3rem', fontFamily: 'AudioWide' }}>SCOTLAND YARD</h1>
                 <hr className='mb-5' />
                 <div className='container mb-5' style={{ fontSize: '1.3rem' }}>
-                    <h2 style={sectionTitleStyle}>🕵️‍♂️ INTRODUCTION</h2>
+                    <h2 style={sectionTitleStyle}>📖 INTRODUCTION</h2>
                     <hr className='mb-4' />
                     <ReactMarkdown source={Content.intro} />
 
@@ -194,6 +194,10 @@ const ScotlandYard = () => {
 
                     <h2 style={sectionTitleStyle}>📝 REFERENCES</h2>
                     <hr className='mb-4' />
+                    <ReactMarkdown source={Content.resource} />
+
+                    <hr className='mb-1' />
+                    <h1 className="display-1 text-center">🕵️‍♂️</h1>
                 </div>
             </div>
         </>
