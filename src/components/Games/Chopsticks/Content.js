@@ -134,7 +134,7 @@ if hint then DFS with m moves
 ### Scalability of The Algorithm
 In case a different specie with say F fingers and H hands want to play a N player game, 
 
-The complexity = $F^3(N+H)$
+The complexity = $F^{3(N+H)}$
 
 We can model a more general model if required, but with respect to the game-chopsticks we assume that only $5$ fingers will be present on 
 every hand and that is constant. To give a reference of the scale here is a table:
